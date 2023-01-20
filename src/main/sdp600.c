@@ -16,7 +16,7 @@ i2c_config_t conf = {
     .scl_io_num = 22,
     .sda_pullup_en = GPIO_PULLUP_ENABLE,
     .scl_pullup_en = GPIO_PULLUP_ENABLE,
-    .master.clk_speed = 0xFFFFF,
+    .master.clk_speed = 400000,
     .clk_flags = 0,
 };
 
