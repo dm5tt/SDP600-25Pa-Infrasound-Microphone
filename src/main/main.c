@@ -9,7 +9,7 @@
 
 
 #include "sensor.h"
-#include "sntp.h"
+#include "clock.h"
 #include "wifi.h"
 #include "tcp_socket.h"
 #include "sdp600.h"
@@ -28,12 +28,12 @@ void app_main(void)
     ESP_ERROR_CHECK(ret);
 
     wifi_init_sta();
-    initialize_sntp();
-    wait_for_sntp_sync();
+    clock_init();
+    clock_sync();
     sensor_init();
     sdp600_i2c_init();
 
     xTaskCreate(tcp_server_task, "tcp_server", 10000, NULL, 8, NULL);
     xTaskCreate(sensor_task, "sensor_task", 10000, NULL, 9, NULL);
-    xTaskCreate(update_time_task, "update_time_task", 10000, NULL, 5, NULL);
+    xTaskCreate(clock_task, "clock_task", 10000, NULL, 5, NULL);
 }

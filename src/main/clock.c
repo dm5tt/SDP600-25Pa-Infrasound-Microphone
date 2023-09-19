@@ -8,14 +8,14 @@
 
 static const char *TAG = "SNTP";
 
-void initialize_sntp()
+void clock_init()
 {
     esp_sntp_setoperatingmode(SNTP_OPMODE_POLL);
     esp_sntp_setservername(0, "pool.ntp.org");
     esp_sntp_init();
 }
 
-void wait_for_sntp_sync()
+void clock_sync()
 {
     ESP_LOGI(TAG, "Waiting for SNTP synchronization...");
     time_t now = 0;
@@ -42,7 +42,7 @@ void wait_for_sntp_sync()
                  timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_sec);
     }
 }
-void update_time_task(void *pvParameters)
+void clock_task(void *pvParameters)
 {
     while (1)
     {
