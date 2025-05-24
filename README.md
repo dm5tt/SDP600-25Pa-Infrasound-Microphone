@@ -1,5 +1,5 @@
-![Example Measurement](docs/neighbors_wachinemachine.png)
-(Neighbour who lives a block away running his washing machine)
+![Example Measurement](docs/airplanes_from_EDDS.png)
+(Infrasound recordings of landing airplanes at Stuttgart Airport (EDDS). Vertical distance roughly 3000 meters.)
 
 ## What is this thing?
 
