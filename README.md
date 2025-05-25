@@ -1,5 +1,6 @@
 ![Example Measurement](docs/airplanes_from_EDDS.png)
-(Infrasound recordings of landing airplanes at Stuttgart Airport (EDDS). Vertical distance roughly 3000 meters.)
+
+Infrasound recordings of landing airplanes at Stuttgart Airport (EDDS). Vertical distance roughly 3000 meters. Most likely coming from extended landing flaps.
 
 ## What is this thing?
 
